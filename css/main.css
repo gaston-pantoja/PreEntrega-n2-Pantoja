@@ -19,7 +19,8 @@ header{
     align-items: center;
     padding: 0.2rem;
     background-color: #a0a0a0;
-    cursor: default
+    cursor: default;
+    width: 100%;
 }
 
 
@@ -51,6 +52,8 @@ header{
     display: block;
     width: 90px;
     height: auto;
+    position: relative;
+    bottom: 1rem;
 }
 
 /* menu */
@@ -58,7 +61,7 @@ header{
 .menu{
     flex: 1;
     width: 100%;
-    margin-top: -40px;
+    margin-top: -60px;
 }
 
 .menu ul{
@@ -112,7 +115,7 @@ main {
 .imagen-tres{
     grid-area: imagen-tres;
 }
-
+/* texto de los productos y boton */
 .card{
     display: flex;
     flex-direction: column;
@@ -131,15 +134,65 @@ main {
     margin-bottom: 10px;
 }
 
-.card a{
+.card h3{
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.card p{
+    font-weight: bold;
     color: #900;
+    margin-top: 10px;
+}
+
+.btn{
+    display: inline-block;
+    background-color: black;
+    color: whitesmoke;
+    padding: 8px 2px;
+    border-radius: 5px;
     text-decoration: none;
 }
 
-.social li{
-    list-style: none;
-    text-align: right;
+.btn:hover{
+    background-color: #c00;
 }
+
+/* estilos de footer */
+
+footer{
+    background-color: #a0a0a0;
+    padding: 15px 40px;
+}
+
+.derechos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.derechos p{
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+/* lista de redes */
+.social{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.social li img{
+    display: flex;
+    justify-content: space-between;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+}
+
 
 /* productos.html */
 .pagina2 h1 {
