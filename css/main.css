@@ -18,6 +18,8 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 0.2rem;
+    gap: 10px;
+    flex-wrap: wrap;
     width: 100%;
     background-color: #a0a0a0;
     cursor: default;
@@ -25,10 +27,19 @@ header{
 
 
 /* buscador */
+.buscador{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .buscador input{
+    width: 90%;
+    max-width: 400px;
     padding: 8px 12px;
     position: relative;
     justify-content: center;
+    box-sizing: border-box;
 }
 
 /* logo */
@@ -51,7 +62,7 @@ header{
 
 .logo img{
     display: block;
-    width: 90px;
+    width: 80px;
     height: auto;
     position: relative;
     bottom: 1rem;
@@ -215,23 +226,72 @@ footer{
 
 /* Tablet (pantallas medianas) */
 @media (max-width: 1024px) {
-  body {
-    font-size: 16px;
-    flex-direction: column;
+    body {
+        font-size: 16px;
+        flex-direction: column;
   }
-}
-
+    
     header{
         width: 100%;
         background-color: #a0a0a0;
         margin: 0;
     }
 
-@media screen and (min-width: 780px){
+     .productos-uno{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "imagen-uno imagen-dos"
+        "imagen-tres imagen-cuatro";
+    }
+
+    .imagen-cuatro{
+        grid-area: imagen-cuatro;
+    }
+
+    footer{
+        width: 100%;
+        background-color: #a0a0a0;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 768px){
     header{
-        
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo img{
+        width: 70px;
+        margin-bottom: 10px;
+    }
+
+    .buscador{
+        width: 80%;
+    }
+
+    .productos-uno{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "imagen-uno"
+        "imagen-dos"
+        "imagen-tres"
+        "imagen-cuatro"
+        "imagen-cinco"
+        "imagen-seis";
+
+    }
+
+    .imagen-cinco{
+        grid-area: imagen-cinco;
+    }
+
+    .imagen-seis{
+        grid-area: imagen-seis;
     }
 }
     
-
+    
 
